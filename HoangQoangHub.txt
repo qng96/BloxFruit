@@ -824,7 +824,7 @@ LowCpu = function()
 			elseif K:IsA("MeshPart") then
 				K.Material = "Plastic";
 				K.Reflectance = 0;
-				K.TextureID = 10385902758728957;
+				K.TextureID = 93133335012077;
 			end;
 		end;
 		for I, e in pairs(n:GetChildren()) do
