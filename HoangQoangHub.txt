@@ -8,7 +8,7 @@ local Services = setmetatable({}, {
 
 
 local HttpService = Services.HttpService
-local FolderName = "HLuuVN hub"
+local FolderName = "Dragon Hub"
 local FileName = "Settings.json"
 local FullPath = FolderName .. "/" .. FileName
 
@@ -2641,18 +2641,18 @@ end
 
 local bearlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/qng96/main/refs/heads/main/mainHL.lua"))()
 local Window = bearlib:MakeWindow({
-    Title = "Bear hub | Farm",
-    SubTitle = "by Quang Huy",
+    Title = "Dragon Hub",
+    SubTitle = "Blox Fruit",
     SaveFolder = true,
-    Image = "82107905019656"
+    Image = "93133335012077"
 })
 
 -- Hiển thị thông báo UI đã tải xong
 task.spawn(function()
     task.wait(2)
     bearlib:Notify({
-        Title = "Bear Hub",
-        Message = "Script Load Download Completed",
+        Title = "Dragon Hub",
+        Message = "Script load thành công",
         Duration = 10
     })
 end)
