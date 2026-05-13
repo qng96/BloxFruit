@@ -47,7 +47,7 @@ end
 LoadSettings()
 
 -- ========================================
--- AUTO KEN (Observation Haki)
+-- Tự động cày haki (Haki Quan Sát)
 -- ========================================
 local Players = Services.Players
 local CollectionService = Services.CollectionService
@@ -75,7 +75,7 @@ task.spawn(function()
 end)
 
 -- ========================================
--- AUTO TEAM & LIGHTING
+-- Tự động vào team & Độ sáng
 -- ========================================
 local desiredTeam = "Marines"
 
@@ -87,7 +87,7 @@ end
 
 local Lighting = Services.Lighting
 
--- Full bright (optimized lighting)
+-- Độ sáng tối đa (ánh sáng tối ưu)
 Lighting.Ambient = Color3.new(0.695, 0.695, 0.695)
 Lighting.ColorShift_Bottom = Color3.new(0.695, 0.695, 0.695)
 Lighting.ColorShift_Top = Color3.new(0.695, 0.695, 0.695)
@@ -95,7 +95,7 @@ Lighting.Brightness = 2
 Lighting.FogEnd = 1e10
 
 -- ========================================
--- GLOBAL VARIABLES (Cached & Organized)
+-- Vị trí (Đã lưu vào bộ nhớ cache và sắp xếp)
 -- ========================================
 do
     ply = Services.Players
@@ -114,13 +114,13 @@ do
     Stats = Services.Stats
     Energy = plr.Character.Energy.Value
     
-    -- Tables
+    -- Hiển thị
     Boss = {}
     BringConnections = {}
     MaterialList = {}
     NPCList = {}
     
-    -- Flags
+    -- Cờ
     shouldTween = false
     SoulGuitar = false
     KenTest = true
@@ -133,14 +133,14 @@ do
     Num_self = 25
 end
 
--- Wait for game to load
+-- Chờ trò chơi tải xong
 repeat
     local loading = plr.PlayerGui:FindFirstChild("Main")
     loading = loading and loading:FindFirstChild("Loading")
     task.wait()
 until game:IsLoaded() and not (loading and loading.Visible)
 
--- World Detection (Optimized)
+-- Phát hiện thế giới (Đã tối ưu hóa)
 local placeId = game.PlaceId
 if placeId == 2753915549 or placeId == 85211729168715 then
     World1 = true
@@ -149,7 +149,7 @@ elseif placeId == 4442272183 or placeId == 79091703265657 then
 elseif placeId == 7449423635 or placeId == 100117331123089 then
     World3 = true
 else
-    plr:Kick("❌ Error Blox Fruits - World not recognized")
+    plr:Kick("❌ Lỗi Blox Fruits - Map không được công nhận")
 end
 
 Sea = World1 or World2 or World3
@@ -351,7 +351,7 @@ gay = (function()
     local I = game:GetService("Lighting");
     local e = I:FindFirstChild("LightingLayers");
 
-    -- NÃO remover DarkFog
+    -- KHÔNG được xóa Sương Mù Tối
 
     local K = workspace._WorldOrigin["Foam;"];
     if K and workspace._WorldOrigin["Foam;"] then
@@ -377,7 +377,7 @@ G.Dist = function(I, e)
 G.DistH = function(I, e)
 		return (Root.Position - (I:FindFirstChild("HumanoidRootPart")).Position).Magnitude > e;
 	end;
--- ALTURA ÚNICA AJUSTÁVEL DO MOB
+-- CHIỀU CAO CÓ THỂ ĐIỀU CHỈNH ĐỘC ĐÁO CỦA MOB
 _G.MobHeight = _G.MobHeight or 20
 
 G.Kill = function(I, e)
@@ -386,25 +386,25 @@ G.Kill = function(I, e)
 	local hrp = I:FindFirstChild("HumanoidRootPart")
 	if not hrp then return end
 
-	-- trava posição do mob
+	-- khóa vị trí đám đông
 	if not I:GetAttribute("Locked") then
 		I:SetAttribute("Locked", hrp.CFrame)
 	end
 
-	-- posição alvo do bring
+	-- Gôm quái đến mục tiêu
 	PosMon = (I:GetAttribute("Locked")).Position
 
-	-- >>> FORÇA O BRING <<<
+	-- >>> ÉP BUỘC MANG ĐẾN <<<
 	_B = true
 	BringEnemy()
 
-	-- equipa arma
+	-- Chọn vũ khí
 	EquipWeapon(_G.SelectWeapon)
 
 	local tool = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
 	if not tool then return end
 
-	-- TP acima do mob (altura única)
+	-- Dịch chuyển tức thời (TP) phía trên đám đông (độ cao đơn)
 	_tp(hrp.CFrame * CFrame.new(0, _G.MobHeight, 0))
 end
 G.Kill2 = function(I, e)
@@ -2659,31 +2659,31 @@ end)
 
 ------ Tab
 local v0 = Window:MakeTab({
-    Title = "Info/Group",
+    Title = "Thông tin",
     Icon = "rbxassetid://73132811772878"
 })
 local v1 = Window:MakeTab({
-    Title = "Status/Server",
+    Title = "Máy chủ",
     Icon = "rbxassetid://7040410130"
 })
 local v2 = Window:MakeTab({
-    Title = "Farming",
+    Title = "Cày",
     Icon = "rbxassetid://10709769508"
 })
 local v3 = Window:MakeTab({
-    Title = "Quests/Other",
+    Title = "Cày khác",
     Icon = "rbxassetid://10734943448"
 })
 local v4 = Window:MakeTab({
-    Title = "Farm settings",
+    Title = "Cài đặt cày",
     Icon = "rbxassetid://10734950020"
 })
 local v5 = Window:MakeTab({
-    Title = "Auto Fishing",
+    Title = "Câu cá",
     Icon = "rbxassetid://127664059821666"
 })
 local v6 = Window:MakeTab({
-    Title = "Sea Event",
+    Title = "Sự kiện biển",
     Icon = "rbxassetid://10747376931"
 })
 local v7 = Window:MakeTab({
@@ -2691,36 +2691,36 @@ local v7 = Window:MakeTab({
     Icon = "rbxassetid://10734897956"
 })
 local v8 = Window:MakeTab({
-    Title = "Mirage/Race",
+    Title = "Đảo bí ẩn/Tộc",
     Icon = "rbxassetid://10734920149"
 })
 local v9 = Window:MakeTab({
-    Title = "Fruits/Check Stock",
+    Title = "Trái",
     Icon = "rbxassetid://10709790875"
 })
 local v10 = Window:MakeTab({
-    Title = "Raid/Dungoen",
+    Title = "Raid/Dungeon",
     Icon = "rbxassetid://10723404337"
 })
 local v11 = Window:MakeTab({
-    Title = "Teleport/World",
+    Title = "Dịch chuyển",
     Icon = "rbxassetid://10734906975"
 })
 local v12 = Window:MakeTab({
-    Title = "PvP/Player",
+    Title = "PvP/Người chơi",
     Icon = "rbxassetid://10734975692"
 })
 local v13 = Window:MakeTab({
-    Title = "Esp/Stats",
-    Icon = "rbxassetid://10723346959"
+    Title = "Esp",
+	Icon = "rbxassetid://10723346959"
 })
 
 local v14 = Window:MakeTab({
-    Title = "Shop",
+    Title = "Cửa hàng",
     Icon = "rbxassetid://10734952479"
 })
 local v15 = Window:MakeTab({
-    Title = "Settings",
+    Title = "Cài đặt",
     Icon = "rbxassetid://10734950309"
 })
 
