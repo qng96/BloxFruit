@@ -2725,48 +2725,48 @@ local v15 = Window:MakeTab({
 })
 
 v0:AddProfile({
-    Name = "Quang Huy ☑",             
-    Bio = "I LOVE VIETNAM'S", 
-    Avatar = "rbxassetid://75089236463451", 
-    Cover = "rbxassetid://113942234405258", 
+    Name = "HLuuVN ☑",             
+    Bio = "22-11-1995", 
+    Avatar = "rbxassetid://96915566851000", 
+    Cover = "rbxassetid://105102363306887", 
     Verified = true 
 })
 v0:AddSingleDiscordCard({
 "Huy Script 🇻🇳",
-        "Follow our TikTok channel for the latest updates!!!",
-        "rbxassetid://75089236463451",
-        "rbxassetid://125520177394706",
+        "Theo dõi kênh TikTok của chúng tôi để cập nhật thông tin mới nhất",
+        "rbxassetid://96915566851000",
+        "rbxassetid://105102363306887",
         2000,
         10000,
-        "https://tiktok.me/group/ZSm9FrLKD/"
+        "https://www.tiktok.com/@hluuvngaming"
 })
 
 v0:AddParagraph({
     "Thông báo",
-    "•Bear hub\n• Script by Quang Huy\n• Creation Date: 7-6-2026\n• Last updated date: 7-6-2026\n• Aura gun hiện chưa bắn được thuyền và leviathan"
+    "•Dragon Hub\n• Script tạo bởi HLuuVN\n• Ngày tạo: 13-05-2026\n• Ngày cập nhật lần cuối: 13-05-20266\n• Aura gun hiện chưa bắn được thuyền và leviathan"
 })
 
 -- 1. Tạo Discord Invite Container với 2 card
 local discordContainer = v0:AddDiscordInvite({
     -- Card 1
     {
-        "Join the TikTok Group",
-        "Follow our TikTok channel for the latest updates!!!",
-        "rbxassetid://134852113716171",
-        "rbxassetid://84636833673111",
+        "Tham gia nhóm TikTok(Đang cập nhập)",
+        "Theo dõi kênh TikTok của chúng tôi để cập nhật thông tin mới nhất!",
+        "rbxassetid://93133335012077",
+        "rbxassetid://105102363306887",
         500,
         1500,
-        "https://tiktok.me/group/ZSm9FrLKD/"
+        ""
     },
     -- Card 2
     {
-        "Join the Discord group",
-        "Join the Discord group to stay updated with the latest announcements.",
-        "rbxassetid://134852113716171",
-        "rbxassetid://123427419242741",
+        "Tham gia nhóm Discord(Đang cập nhập)",
+        "Tham gia nhóm Discord để cập nhật những thông báo mới nhất.",
+        "rbxassetid://93133335012077",
+        "rbxassetid://105102363306887",
         250,
         1000,
-        "https://discord.gg/4XtcBYZ89"
+        ""
     }
 })
 
