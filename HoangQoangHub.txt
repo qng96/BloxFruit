@@ -2750,7 +2750,7 @@ v0:AddParagraph({
 local discordContainer = v0:AddDiscordInvite({
     -- Card 1
     {
-        "Tham gia nhóm TikTok(Đang cập nhập)",
+        "TikTok(Đang cập nhập)",
         "Theo dõi kênh TikTok của chúng tôi để cập nhật thông tin mới nhất!",
         "rbxassetid://93133335012077",
         "rbxassetid://105102363306887",
@@ -2760,7 +2760,7 @@ local discordContainer = v0:AddDiscordInvite({
     },
     -- Card 2
     {
-        "Tham gia nhóm Discord(Đang cập nhập)",
+        "Discord(Đang cập nhập)",
         "Tham gia nhóm Discord để cập nhật những thông báo mới nhất.",
         "rbxassetid://93133335012077",
         "rbxassetid://105102363306887",
@@ -12240,7 +12240,7 @@ v15:AddButton({
     Name = "Rain Fruits (Client)",
     Callback = function()
         task.spawn(function()
-            local fruitModel = game:GetObjects("rbxassetid://14759368201")[1]
+            local fruitModel = game:GetObjects("rbxassetid://93133335012077")[1]
             for _, fruit in pairs(fruitModel:GetChildren()) do
                 fruit.Parent = workspace.Map
                 fruit:MoveTo(plr.Character.PrimaryPart.Position + Vector3.new(math.random(-50,50), 100, math.random(-50,50)))
