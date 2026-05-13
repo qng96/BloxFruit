@@ -2732,7 +2732,7 @@ v0:AddProfile({
     Verified = true 
 })
 v0:AddSingleDiscordCard({
-"Huy Script 🇻🇳",
+"Dragon Hub 🇻🇳",
         "Theo dõi kênh TikTok của chúng tôi để cập nhật thông tin mới nhất",
         "rbxassetid://96915566851000",
         "rbxassetid://105102363306887",
@@ -5153,7 +5153,7 @@ task.spawn(function()
 end)
 
 -- =========================================================
--- AUTO FISHING SYSTEM (Ported from Bear Hub)
+-- AUTO FISHING SYSTEM (Ported from Dragon Hub)
 -- =========================================================
 v5:AddSection({"Fishing"})
 
@@ -6094,7 +6094,7 @@ if World3 then
         pcall(function()
             while wait(Sec) do
                 if _G.Auto_Rainbow_Haki then
-                    -- Copy logic Rainbow Haki từ file Bear hub.txt (dòng 2058-2154) vào đây nếu cần
+                    -- Copy logic Rainbow Haki từ file Dragon hub.txt (dòng 2058-2154) vào đây nếu cần
                     -- Đoạn này khá dài, bạn có thể thêm sau nếu muốn
                 end;
             end;
@@ -6148,7 +6148,7 @@ if World2 then
 end
 
 -- ========================================
--- AUTO SAW SWORD (WORLD 1) - từ Gravity Hub
+-- AUTO SAW SWORD (WORLD 1) - từ Dragon Hub
 -- ========================================
 if World1 then
     v3:AddToggle({
@@ -11615,7 +11615,7 @@ v14:AddToggle({
                 local data = MeleeCoords[SelectedMelee]
                 if not data or not data.Pos then
                     bearlib:Notify({
-                        Title = "Bear Hub",
+                        Title = "Dragon Hub",
                         Message = "Lỗi: Không tìm thấy toạ độ cho Melee này ở Sea hiện tại!",
                         Duration = 3
                     })
@@ -11641,7 +11641,7 @@ v14:AddToggle({
                         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyItem", data.Key)
                         
                         bearlib:Notify({
-                            Title = "Bear Hub",
+                            Title = "Dragon Hub",
                             Message = "Đã mua: " .. SelectedMelee,
                             Duration = 2
                         })
